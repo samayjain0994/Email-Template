@@ -1,0 +1,108 @@
+<div style="font-family: Arial, Helvetica, sans-serif; font-size: 14px; color: #111; max-width: 760px; line-height: 1.25;">
+
+  <div style="background-color:#0096c7; color:white; width:95px; height:95px; display:flex; align-items:center; justify-content:center; font-weight:bold; margin-left:15px;">
+    A Message
+  </div>
+
+  <div style="font-size:30px; color:#0073a8; margin-top:25px;">
+    from SCS Cyber Operations
+  </div>
+
+  <div style="background-color:#0096c7; color:#111; font-weight:bold; padding:2px 4px; margin-top:18px; width:100%;">
+    Data Protection Alert – Unauthorized Service Account Use – Case XXXXXX
+  </div>
+
+  <p>Hi [Manager Name],</p>
+
+  <p>
+    We identified recent <b>interactive use of a non-human identity (service account)</b> by a member of your team.
+    Service accounts are intended for automated system use only and should not be used for individual logins
+    (e.g., desktop access or direct database access).
+  </p>
+
+  <p><b>Details</b></p>
+
+  <ul>
+    <li><b>Service Account:</b> [event_target_user_userid]</li>
+    <li><b>User:</b> [event_principal_user_userDisplayName]</li>
+    <li><b>Last Detected Use:</b> [event_metadata_eventTimestamp]</li>
+    <li><b>System/Environment:</b> [event_additional_database]</li>
+  </ul>
+
+  <p><b>Why this matters</b><br>
+  Interactive use of service accounts:</p>
+
+  <ul>
+    <li>Obscures accountability for actions taken</li>
+    <li>Bypasses key controls such as MFA and session monitoring</li>
+    <li>Increases risk to systems and sensitive data</li>
+  </ul>
+
+  <p>
+    This activity is not permitted under the
+    <a href="#" style="color:#006b8f; font-weight:bold;">Identity, Authentication, and Access Management Standard (STND_00341)</a>
+    and/or the
+    <a href="#" style="color:#006b8f; font-weight:bold;">Network Security Standard (STND_02781)</a>.
+  </p>
+
+  <p><b>What we need from you</b></p>
+
+  <table style="border-collapse:collapse; width:100%; border:1px solid #666;">
+    <tr>
+      <td style="width:80px; border-right:1px solid #666; vertical-align:top; padding:15px; text-align:center;">
+        📝
+      </td>
+      <td style="padding:12px; vertical-align:top;">
+        <p style="margin-top:0;"><b><u>Action Items</u></b></p>
+        <p>
+          Please ensure that <b>[event_principal_user_userDisplayName]</b> stops using this service account for
+          <b>interactive access immediately.</b> Access should be performed using an individual (human) account.
+          If additional access is required, it should be requested through
+          <a href="#" style="color:#006b8f; font-weight:bold;">MyAccess</a>.
+          System credentials are intended only for system-to-system authentication and should not be used by human users.
+        </p>
+      </td>
+    </tr>
+  </table>
+
+  <p><b>What happens next</b></p>
+
+  <ul>
+    <li>We will close this case and continue to monitor for this activity</li>
+    <li>Continued use may result in access restriction or removal</li>
+    <li>Repeated occurrences will be escalated to leadership and may result in the service account being disabled</li>
+  </ul>
+
+  <p>
+    If this service account is being used due to an access gap or tooling limitation, we can help resolve it quickly.
+  </p>
+
+  <p>
+    Please reference platform-specific guidance in
+    <a href="#" style="color:#006b8f;">Database Access Governance (DAG)</a>,
+    or consult the following architecture resources:
+  </p>
+
+  <ul>
+    <li><a href="#" style="color:#006b8f;"><i>System Credential Management Solution Selector (Schwab Architecture Library)</i></a></li>
+    <li><a href="#" style="color:#006b8f;"><i>System Authentication Solution Selector (Schwab Architecture Library)</i></a></li>
+  </ul>
+
+  <p>Thank you for your prompt attention to this matter.</p>
+
+  <p>
+    _______________________<br>
+    Data Protection Operations Team<br>
+    Schwab Cybersecurity Services (SCS)
+  </p>
+
+  <div style="text-align:center; margin-top:35px;">
+    <div style="display:inline-block; background-color:#0096c7; color:white; padding:12px 10px; font-size:14px;">
+      charles<br>SCHWAB
+    </div>
+    <div style="font-family:cursive; font-size:20px; margin-top:10px;">
+      Own your tomorrow
+    </div>
+  </div>
+
+</div>
