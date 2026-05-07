@@ -1,0 +1,75 @@
+Wins:
+1. TI – Updated SOAR Indicator Lists from Anomali
+=================================================
+
+Enhanced the Anomali Indicators synchronization job within SOAR to automatically:
+Fetch new indicators from Anomali
+Add active indicators into SOAR custom lists
+Remove expired indicators based on expiration date validation
+Updated and maintained the custom list category:
+Threat_Intel_Indicators
+Improved automation reliability by enabling hourly execution and editable query support.
+Business Impact:
+Improved threat intelligence synchronization accuracy
+Reduced manual maintenance effort for expired indicators
+Enhanced indicator lifecycle management within SOAR
+2. TI Exposed Users Enrichment Automation
+=============================================
+
+Created a new workflow for processing TI Exposed Users CSV attachments received through the Phantom mailbox.
+Built automation that:
+Detects incoming TI emails
+Parses CSV attachments
+Appends data into the Threat_Intel_Exposed_Users data table
+Developed the TI Exposed User Update playbook for automated processing and enrichment.
+Business Impact:
+Reduced manual effort for exposed user ingestion
+Improved visibility into exposed user intelligence
+Accelerated enrichment processing for SOC investigations
+3. TI Enrichment Playbook Enhancements
+==========================================
+
+Developed dedicated enrichment blocks for:
+TI Anomali List Match
+TI Exposed Users Data Table Match
+Implemented entity comparison logic using Enrich Entities actions.
+Added automated:
+General Insights generation
+TI curated tagging
+Email notifications to TI team with SOC CC support
+Created centralized TI Enrichment Playbook integrating both Anomali and Exposed Users enrichment capabilities.
+Business Impact:
+Improved SOC analyst investigation efficiency
+Enhanced threat intelligence correlation across alerts
+Standardized enrichment workflows for consistent alert handling
+4. CrowdStrike Hash Ban Playbook Automation
+================================================
+
+Created a CrowdStrike Hash Ban playbook that:
+Accepts analyst input through custom actions
+Validates hashes before processing
+Uploads IOCs into CrowdStrike using modified IOC upload actions
+Added:
+SOAR Case ID tracking
+BMC Incident ID integration
+Analyst notes logging
+Integrated automated incident lifecycle handling using:
+Update Status – Incident
+Update Status – Resolved playbooks
+Business Impact:
+Improved response time for malicious hash containment
+Enhanced audit tracking and incident traceability
+Reduced manual SOC effort for IOC blocking operations
+5. Curated Rules Classification Automation
+==============================================
+
+Created the Curated Rules Classification playbook in Preprod BYOP environment.
+Implemented logic to:
+Match Alert Rule IDs against curated detection data tables
+Automatically apply SOC tags
+Normalize curated rule naming into SCH_SR_* format
+Integrated playbook support for VirusTotal workflows.
+Business Impact:
+Improved curated detection classification accuracy
+Enhanced SOC alert visibility and tagging consistency
+Reduced manual rule mapping effort for analysts
